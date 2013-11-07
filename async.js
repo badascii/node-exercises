@@ -1,4 +1,5 @@
 var read = require('read');
+var fs   = require('fs');
 
 var addresses = [];
 
@@ -36,3 +37,7 @@ function getAddress(err, result, isdefault) {
     addresses.push(contact);
   });
 }
+
+// function saveData(newInfo, data) {
+
+// }
