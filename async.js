@@ -1,5 +1,7 @@
 var read = require('read');
 
+var addresses = [];
+
 var Contact = function(name, address, phone) {
   this.name    = '';
   this.address = '';
@@ -31,5 +33,6 @@ function getAddress(err, result, isdefault) {
   read({prompt: '> '}, function(err, result) {
     contact.address = result;
     console.log(contact.toString());
+    addresses.push(contact);
   });
 }
